@@ -1,0 +1,151 @@
+:root {
+  --font-size: 14px;
+
+  --color: #111;
+  --bg-color: #fffff8;
+  --faded-bg: #f9f9f2;
+
+  --title-font-size: 16px;
+  --title-font-weight: 600;
+
+  --main-padding-right: 8rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: #ddd;
+    --bg-color: #151515;
+    --faded-bg: #1b1b1b;
+  }
+}
+
+body {
+  color: var(--color);
+  background-color: var(--bg-color);
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  font-family: monospace;
+  font-size: var(--font-size);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  margin: 1rem 0 2rem 0;
+  gap: 10px;
+  top: 0;
+  background-color: var(--bg-color);
+  z-index: 9999;
+}
+
+header > h1 {
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: monospace;
+}
+
+a:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #b58c8c;
+}
+
+a:hover {
+  opacity: .75;
+}
+
+p {
+  margin: 0;
+  padding: 0.25rem 0;
+}
+
+.search {
+  width: 100%;
+}
+
+.text-input {
+  font-family: monospace;
+  background-color: var(--faded-bg);
+  padding: 1rem;
+  color: var(--color);
+  border: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.text-input:focus {
+  outline: 0;
+}
+
+.day {
+  margin-bottom: 2rem;
+}
+
+.videos {
+  padding: 1rem 0;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.video > a > img {
+  width: 100%;
+  height: auto;
+}
+
+.github {
+  position:fixed;
+  bottom: 4px;
+  right: 4px;
+  opacity: 0.25;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+.inline {
+  display: inline;
+}
+
+.input-group {
+  display: flex;
+}
+
+button {
+  font-family: monospace;
+  border: 1px solid var(--bg-color);
+  background-color: var(--faded-bg);
+  color: var(--color);
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--bg-color);
+}
+
+.subscriptions > summary {
+  font-weight: 600;
+  cursor: pointer;
+  padding: 1em 0;
+  user-select: none;
+}
+
+.subscriptions > summary:hover {
+  background-color: var(--faded-bg);
+}
+
+.subscriptions > article {
+  margin: 0.6rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 4px;
+}
